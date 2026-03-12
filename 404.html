@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="404.css">
+</head>
+<body class="error-page">
+
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-icon" data-aos="zoom-in" >
+                <i class="fas fa-search-minus"></i>
+            </div>
+            
+            <h1 class="error-code" data-aos="fade-up" >404</h1>
+            <h2 class="error-title" data-aos="fade-up" >Oops! This job seems to have expired.</h2>
+            <p class="error-message" data-aos="fade-up" >
+                The page you are looking for doesn't exist or has been moved. 
+                Don't worry, your dream career is still out there!
+            </p>
+
+
+            <div class="error-actions"  >
+                <a href="index.html" class="btn-outline"><i class="fas fa-home"></i> Back to Home</a>
+                <a href="jobPage.html" class="btn-primary">Browse All Jobs</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

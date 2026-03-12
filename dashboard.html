@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stackly - Dashboard</title>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+   <div id="page-transition" class="transition-overlay">
+      <div class="transition-content">
+        <img
+          src="assets/logo.webp"
+          alt="StackLu Logo"
+          class="transition-logo"
+        />
+        <div class="transition-spinner"></div>
+        <h4>Loading...</h4>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link active"
+              >Home <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="jobPage.html" class="nav-link">Find Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="login.html" class="login-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Login</span>
+          </a>
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+        <header style="margin: 25px 0;">
+            <h2>Dashboard</h2>
+            <p style="color: #64748b;">Welcome back, Arjun!</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div><p style="font-size: 0.8rem; color: #64748b;">Applied</p><h3>24</h3></div>
+                <i class="fas fa-paper-plane" style="color: var(--primary);"></i>
+            </div>
+            <div class="stat-card">
+                <div><p style="font-size: 0.8rem; color: #64748b;">Interviews</p><h3>5</h3></div>
+                <i class="fas fa-calendar" style="color: #10b981;"></i>
+            </div>
+            <div class="stat-card">
+                <div><p style="font-size: 0.8rem; color: #64748b;">Profile Views</p><h3>146</h3></div>
+                <i class="fas fa-eye" style="color: #1e293b;"></i>
+            </div>
+            <div class="stat-card">
+                <div><p style="font-size: 0.8rem; color: #64748b;">Saved Jobs</p><h3>18</h3></div>
+                <i class="fas fa-bell" style="color: #f59e0b;"></i>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            
+            <div class="card">
+                <h3>Application Growth</h3>
+                <div class="chart-box">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Recommended</h3>
+                <div class="job-item">
+                    <span>Frontend Dev</span>
+                    <button class="btn">Apply</button>
+                </div>
+                <div class="job-item">
+                    <span>React Dev</span>
+                    <button class="btn">Apply</button>
+                </div>
+                <div class="job-item">
+                    <span>Backend Dev</span>
+                    <button class="btn">Apply</button>
+                </div>
+                <div class="job-item">
+                    <span>Full Stack Dev</span>
+                    <button class="btn">Apply</button>
+                </div>
+            </div>
+
+            <div class="card table-area">
+                <h3>Recent Applications</h3>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Position</th>
+                                <th>Status</th>
+                                <th>Date Applied</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google Inc.</strong></td>
+                                <td>Frontend Engineer</td>
+                                <td style="color: #f59e0b;">Pending</td>
+                                <td>March 10, 2026</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Amazon</strong></td>
+                                <td>UI Developer</td>
+                                <td style="color: #10b981;">Interview</td>
+                                <td>March 08, 2026</td>
+                            </tr>
+                             <tr>
+                                <td><strong>Zoho</strong></td>
+                                <td>Software Engineer</td>
+                                <td style="color: #f59e0b;">Pending</td>
+                                <td>March 11, 2026</td>
+                            </tr>
+                             <tr>
+                                <td><strong>Microsoft</strong></td>
+                                <td>Data Engineer</td>
+                                <td style="color: #f59e0b;">Pending</td>
+                                <td>March 11, 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+     <footer class="main-footer" data-aos="fade-up">
+      <div class="footer-container">
+        <div class="footer-col footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+          </a>
+          <p class="footer-description">
+            Connecting India's brightest talent with world-class opportunities.
+            Your journey to a dream career starts here.
+          </p>
+         
+          <div class="social-links">
+            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404.html"><i class="fab fa-twitter"></i></a>
+            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+            <a href="404.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobPage.html">Find Jobs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Latest Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>For Candidates</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Browse Categories</a></li>
+            <li><a href="404.html">Saved Jobs</a></li>
+            <li><a href="404.html">Job Alerts</a></li>
+            <li><a href="blog.html">Career Advice</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Business Hub, HITEC City, Hyderabad, India</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@joblink.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 JobLink Portal. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Applications',
+                    data: [10, 25, 15, 35, 28],
+                    borderColor: '#4f46e5',
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(79, 70, 229, 0.05)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, /* This allows chart to resize properly */
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { grid: { borderDash: [5, 5] } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly - Contact Us</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+   
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="contact.css">
+
+<style>
+
+.error{
+color:#ef4444;
+font-size:12px;
+margin-top:4px;
+display:block;
+}
+
+.error-border{
+border:1px solid #ef4444 !important;
+}
+
+</style>
+
+</head>
+
+<body>
+    <div id="page-transition" class="transition-overlay">
+      <div class="transition-content">
+        <img
+          src="assets/logo.webp"
+          alt="StackLu Logo"
+          class="transition-logo"
+        />
+        <div class="transition-spinner"></div>
+        <h4>Loading...</h4>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link active"
+              >Home <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="jobPage.html" class="nav-link">Find Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="login.html" class="login-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Login</span>
+          </a>
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="contact-hero">
+    <div class="contact-hero-overlay"></div>
+    
+    <div class="section-container">
+        <div class="contact-hero-wrapper">
+            <div class="contact-hero-content" data-aos="fade-up">
+                <span class="contact-badge">
+                    <i class="fas fa-headset"></i> 24/7 Support Available
+                </span>
+                
+                <h1 class="contact-title">
+                    Let's Build Your <br>
+                    <span class="text-highlight">Future Together.</span>
+                </h1>
+                
+                <p class="contact-description">
+                    Have questions about job listings or career roadmaps? Our team in Salem is here to help you navigate your professional journey.
+                </p>
+
+                <div class="contact-quick-stats">
+                    <div class="stat-box">
+                        <i class="fas fa-clock"></i>
+                        <span><small>Response Time</small><br>Under 2 Hours</span>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-smile-beam"></i>
+                        <span><small>User Rating</small><br>4.9/5.0 Stars</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="contact-page-wrapper">
+
+<div class="container main-content-grid">
+
+<!-- LEFT SECTION -->
+
+<section class="info-section section" data-aos="fade-right">
+
+<div class="brand-box">
+<span class="logo-text">Stack<span>ly</span></span>
+</div>
+
+<div class="content-header">
+<h1>Let’s talk about your <span class="highlight">Future.</span></h1>
+<p>Reach out for support, partnerships, or just to say hello. Our specialized teams are ready to assist.</p>
+</div>
+
+<div class="contact-methods">
+
+<div class="method-card">
+<div class="icon-circle"><i class="fas fa-envelope"></i></div>
+<div class="details">
+<span>Email Us</span>
+<strong>hello@stackly.com</strong>
+</div>
+</div>
+
+<div class="method-card">
+<div class="icon-circle"><i class="fas fa-phone"></i></div>
+<div class="details">
+<span>Call Support</span>
+<strong>+91 98765 43210</strong>
+</div>
+</div>
+
+</div>
+
+<div class="office-preview">
+
+<img src="assets/workplace4.webp">
+
+<div class="overlay-text">
+<i class="fas fa-map-marker-alt"></i>
+<p>Stackly, Tamil Nadu</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM SECTION -->
+
+<section class="form-section" data-aos="fade-left">
+
+<div class="glass-form-container">
+
+<div class="form-header">
+<h2>Send a Message</h2>
+<p>Typically responds in under 2 hours.</p>
+</div>
+
+<form class="stackly-form" id="contactForm">
+
+<div class="input-row">
+
+<div class="input-field">
+<label>First Name</label>
+<input type="text" id="firstName" placeholder="John">
+<small class="error"></small>
+</div>
+
+<div class="input-field">
+<label>Last Name</label>
+<input type="text" id="lastName" placeholder="Doe">
+<small class="error"></small>
+</div>
+
+</div>
+
+<div class="input-field">
+<label>Business Email</label>
+<input type="email" id="email" placeholder="john@company.com">
+<small class="error"></small>
+</div>
+
+<div class="input-field">
+<label>Subject</label>
+
+<select id="subject">
+<option value="">Select Subject</option>
+<option>Platform Support</option>
+<option>Employer Partnership</option>
+<option>Account Issues</option>
+<option>Other</option>
+</select>
+
+<small class="error"></small>
+
+</div>
+
+<div class="input-field">
+<label>Message</label>
+<textarea rows="4" id="message" placeholder="How can we help?"></textarea>
+<small class="error"></small>
+</div>
+
+<button type="submit" class="submit-btn">
+<span>Launch Message</span>
+<i class="fas fa-paper-plane"></i>
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+</div>
+  
+</main>
+<div class="container" style="margin-top: 40px;" data-aos="fade-up">
+        <div class="map-full-wrapper" style="width: 100%; border-radius: 24px; overflow: hidden; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <div class="map-header" style="margin-bottom: 15px; padding-left: 10px;">
+                <h3 style="font-size: 1.2rem; color: #1e293b;"><i class="fas fa-map-marked-alt" style="color: #6366f1; margin-right: 10px;"></i> Visit Our Office</h3>
+                <p style="font-size: 0.9rem; color: #64748b;">Stackly, Salem, Tamil Nadu, India</p>
+            </div>
+            
+            <div style="width: 100%; height: 400px; border-radius: 15px; overflow: hidden;">
+                <iframe 
+                    src="https://www.google.com/maps?q=MMR+Complex,+Chinna+Thirupathi,+near+Chinna+Muniyappan+Kovil,+Salem,+Tamil+Nadu+636008&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+ <footer class="main-footer" data-aos="fade-up">
+      <div class="footer-container">
+        <div class="footer-col footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+          </a>
+          <p class="footer-description">
+            Connecting India's brightest talent with world-class opportunities.
+            Your journey to a dream career starts here.
+          </p>
+         
+          <div class="social-links">
+            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404.html"><i class="fab fa-twitter"></i></a>
+            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+            <a href="404.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobPage.html">Find Jobs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Latest Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>For Candidates</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Browse Categories</a></li>
+            <li><a href="404.html">Saved Jobs</a></li>
+            <li><a href="404.html">Job Alerts</a></li>
+            <li><a href="blog.html">Career Advice</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Business Hub, HITEC City, Hyderabad, India</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@joblink.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 JobLink Portal. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+})
+</script>
+
+<!-- VALIDATION SCRIPT -->
+ <script src="script.js"></script>
+
+<script>
+
+const form=document.getElementById("contactForm")
+
+const firstName=document.getElementById("firstName")
+const lastName=document.getElementById("lastName")
+const email=document.getElementById("email")
+const subject=document.getElementById("subject")
+const message=document.getElementById("message")
+
+function showError(input,msg){
+
+const field=input.parentElement
+const error=field.querySelector(".error")
+
+error.innerText=msg
+input.classList.add("error-border")
+
+}
+
+function clearError(input){
+
+const field=input.parentElement
+const error=field.querySelector(".error")
+
+error.innerText=""
+input.classList.remove("error-border")
+
+}
+
+function validEmail(value){
+
+const pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+return pattern.test(value)
+
+}
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let valid=true
+
+if(firstName.value.trim()===""){
+showError(firstName,"First name is required")
+valid=false
+}else{
+clearError(firstName)
+}
+
+if(lastName.value.trim()===""){
+showError(lastName,"Last name is required")
+valid=false
+}else{
+clearError(lastName)
+}
+
+if(email.value.trim()===""){
+showError(email,"Email is required")
+valid=false
+}else if(!validEmail(email.value)){
+showError(email,"Enter valid email")
+valid=false
+}else{
+clearError(email)
+}
+
+if(subject.value===""){
+showError(subject,"Please select subject")
+valid=false
+}else{
+clearError(subject)
+}
+
+if(message.value.trim()===""){
+showError(message,"Message cannot be empty")
+valid=false
+}else{
+clearError(message)
+}
+
+if(valid){
+
+window.location.href="404.html"
+
+}
+
+})
+
+const inputs=[firstName,lastName,email,subject,message]
+
+inputs.forEach(input=>{
+
+input.addEventListener("input",function(){
+
+clearError(input)
+
+})
+
+})
+
+</script>
+
+</body>
+</html>

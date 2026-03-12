@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="services.css" />
+ 
+  <title>Document</title>
+</head>
+<body>
+
+<!-- Page Loader -->
+
+ <div id="page-transition" class="transition-overlay">
+      <div class="transition-content">
+        <img
+          src="assets/logo.webp"
+          alt="StackLu Logo"
+          class="transition-logo"
+        />
+        <div class="transition-spinner"></div>
+        <h4>Loading...</h4>
+      </div>
+    </div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <a href="index.html" class="logo">
+      <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img">
+    </a>
+
+    <ul class="nav-menu" id="nav-menu">
+
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link active">
+          Home <i class="fas fa-chevron-down"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="jobPage.html" class="nav-link">Find Jobs</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+      <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+      <a href="login.html" class="login-link">
+        <i class="fas fa-user-circle"></i>
+        <span>Login</span>
+      </a>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- MAIN CONTENT -->
+<main class="main-wrapper">
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="hero-content" data-aos="fade-right">
+      <span class="hero-label">Premium Access</span>
+
+      <h1>
+        Your Dream Job,<br>
+        <span class="highlight">Simplified.</span>
+      </h1>
+
+      <p>
+        Join thousands of professionals in Tamil Nadu and across India who use Stackly to build their future with AI-assisted career tools.
+      </p>
+
+      <a href="404.html" class="btn-primary">Get Started Now</a>
+    </div>
+
+    <div class="hero-image" data-aos="fade-left">
+      <img src="assets/team-business.webp" alt="Team Collaboration">
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- CORE SOLUTIONS -->
+<section class="core-solutions">
+
+<div class="container solutions-grid">
+
+  <div class="solution-left" data-aos="fade-right">
+
+    <span class="section-tag">Core Solutions</span>
+
+    <h1>
+      Everything you need <br>to
+      <span class="highlight">Level Up.</span>
+    </h1>
+
+    <p>
+      
+      Stackly provides an end-to-end ecosystem designed to remove the friction from the hiring process.
+      Track salary trends and demand for your specific technology stack.
+    </p>
+
+    <div class="solution-stats">
+
+      <div class="stat">
+        <h2>12k+</h2>
+        <p>Daily Jobs</p>
+      </div>
+
+      <div class="stat-divider"></div>
+
+      <div class="stat">
+        <h2>98%</h4>
+        <p>Success Rate</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="solution-right" data-aos="fade-left">
+
+    <div class="solution-card">
+
+      <div class="solution-icon icon-blue">
+        <i class="fas fa-search-dollar"></i>
+      </div>
+
+      <h4>Smart Matching</h4>
+
+    </div>
+
+
+
+    <div class="solution-card offset-card">
+
+      <div class="solution-icon icon-pink">
+        <i class="fas fa-file-signature"></i>
+      </div>
+
+      <h4>ATS Optimizer</h4>
+
+    </div>
+
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon icon-green">
+        <i class="fas fa-user-shield"></i>
+      </div>
+
+      <h4>Verified Badges</h4>
+
+    </div>
+
+
+
+    <div class="solution-card offset-card">
+
+      <div class="solution-icon icon-orange">
+        <i class="fas fa-chart-pie"></i>
+      </div>
+
+      <h4>Market Analytics</h4>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+
+<!-- SERVICES -->
+<section class="services-wrapper">
+
+<div class="container">
+
+  <div class="section-header" data-aos="fade-up">
+
+    <span class="sub-title">Our Ecosystem</span>
+
+    <h2 class="main-title">
+      Designed for <span>Everyone</span>
+    </h2>
+
+    <p class="desc">
+      Whether you're looking for your next big break or your next star hire.
+    </p>
+
+  </div>
+
+
+
+  <div class="split-section">
+
+    <div class="panel" data-aos="fade-right">
+
+      <div class="image-box">
+        <img src="assets/women-sitting.webp" alt="For Candidates">
+        <div class="tag">For Candidates</div>
+      </div>
+
+      <h3>For Job Seekers</h3>
+
+      <p>
+        Land high-paying tech roles with our specialized training and referral network.
+      </p>
+
+      <ul class="benefit-list">
+
+        <li><i class="fas fa-check-circle"></i> Unlimited Job Alerts</li>
+        <li><i class="fas fa-check-circle"></i> Direct HR Chat Access</li>
+        <li><i class="fas fa-check-circle"></i> AI Resume Optimizer</li>
+
+      </ul>
+
+      <a href="#" class="panel-btn">
+        Find Jobs <i class="fas fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+
+    <div class="panel" data-aos="fade-left">
+
+      <div class="image-box">
+        <img src="assets/business-meeting.webp" alt="For Employers">
+        <div class="tag employer-tag">For Companies</div>
+      </div>
+
+      <h3>For Employers</h3>
+
+      <p>
+        Source the top 1% of engineering talent using our pre-vetted database.
+      </p>
+
+      <ul class="benefit-list">
+
+        <li><i class="fas fa-check-circle"></i> Smart Candidate Filters</li>
+        <li><i class="fas fa-check-circle"></i> Bulk Interview Scheduling</li>
+        <li><i class="fas fa-check-circle"></i> Premium Company Profile</li>
+
+      </ul>
+
+      <a href="#" class="panel-btn employer-btn">
+        Hire Talent <i class="fas fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+<section class="pricing-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="sub-title" style="color: #fc9a06;">Flexible Plans</span>
+            <h2 class="main-title">Choose Your <span>Career Path</span></h2>
+            <p class="desc">Get the edge you need with our premium career enhancement tools.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-header">
+                    <h4>Basic</h4>
+                    <div class="price">Free<span>/month</span></div>
+                </div>
+                <ul class="p-features">
+                    <li><i class="fas fa-check"></i> 5 Job Applications / day</li>
+                    <li><i class="fas fa-check"></i> Standard Resume Builder</li>
+                    <li><i class="fas fa-check"></i> Public Profile</li>
+                    <li class="disabled"><i class="fas fa-times"></i> AI Skill Analysis</li>
+                </ul>
+                <a href="#" class="btn-outline">Current Plan</a>
+            </div>
+
+            <div class="price-card popular" data-aos="fade-up" data-aos-delay="200">
+                <div class="popular-tag">Most Popular</div>
+                <div class="p-header">
+                    <h4>Professional</h4>
+                    <div class="price">₹999<span>/month</span></div>
+                </div>
+                <ul class="p-features">
+                    <li><i class="fas fa-check"></i> Unlimited Applications</li>
+                    <li><i class="fas fa-check"></i> AI Resume Optimizer (ATS)</li>
+                    <li><i class="fas fa-check"></i> Direct Recruiter Messaging</li>
+                    <li><i class="fas fa-check"></i> Verified Skill Badges</li>
+                </ul>
+                <a href="#" class="btn-primary btn-pro">Get Pro Access</a>
+            </div>
+
+            <div class="price-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-header">
+                    <h4>Enterprise</h4>
+                    <div class="price">Custom</div>
+                </div>
+                <ul class="p-features">
+                    <li><i class="fas fa-check"></i> Bulk Recruitment Tools</li>
+                    <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                    <li><i class="fas fa-check"></i> Advanced Talent Filters</li>
+                    <li><i class="fas fa-check"></i> API Integration</li>
+                </ul>
+                <a href="#" class="btn-outline">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trust-section">
+    <div class="container">
+        <div class="trust-wrapper">
+            <div class="trust-content" data-aos="fade-right">
+                <h2>Trusted by <span>500+</span> Top Companies</h2>
+                <p>We don't just find you jobs; we build careers. See how StackLy has transformed the hiring landscape in India.</p>
+                <div class="trust-logos">
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-amazon"></i>
+                    <i class="fab fa-microsoft"></i>
+                    <i class="fab fa-apple"></i>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-left">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"Stackly's AI Resume Builder helped me land an interview at a Tier-1 tech company within 48 hours. The ATS optimization is a game-changer!"</p>
+                <div class="user-info">
+                    <img src="assets/uifaces-popular-avatar (6).webp" alt="User">
+                    <div>
+                        <h5>Arjun Kumar</h5>
+                        <span>Software Engineer @ Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trends-section">
+    <div class="trends-glow"></div>
+    
+    <div class="container">
+        <div class="trends-wrapper">
+            <div class="trends-content" data-aos="fade-right">
+                <div class="status-pill">
+                    <i class="fas fa-fire-alt pulse-icon"></i> 
+                    Live Market Insights
+                </div>
+                
+                <h2 class="trends-title">
+                    Stay Ahead with <br>
+                    <span class="gradient-text">Market Trends</span>
+                </h2>
+                
+                <p class="trends-desc">
+                    We analyze over 50,000+ job postings daily to give you real-time data on the most in-demand tech stacks in Tamil Nadu.
+                </p>
+                
+                <div class="trend-list">
+                    <div class="trend-item">
+                        <div class="trend-info">
+                            <span class="skill-name"><i class="fab fa-react"></i> React.js / Next.js</span>
+                            <span class="skill-percent">85% Demand</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="trend-item">
+                        <div class="trend-info">
+                            <span class="skill-name"><i class="fab fa-python"></i> Python / AI / ML</span>
+                            <span class="skill-percent">72% Demand</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 72%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="trend-item">
+                        <div class="trend-info">
+                            <span class="skill-name"><i class="fas fa-cloud"></i> DevOps / Cloud</span>
+                            <span class="skill-percent">60% Demand</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trends-visual" data-aos="fade-left">
+                <div class="stats-card-floating">
+                    <div class="s-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                    <div>
+                        <h4>Avg. Salary Hike</h4>
+                        <p class="green-text">+35% for AI Skills</p>
+                    </div>
+                </div>
+
+                <div class="stats-card-floating secondary-float">
+                    <div class="s-icon blue-icon"><i class="fas fa-users"></i></div>
+                    <div>
+                        <h4>Active Hirers</h4>
+                        <p>1.2k+ This Week</p>
+                    </div>
+                </div>
+
+                <div class="main-image-wrapper">
+                    <div class="image-overlay"></div>
+                    <img src="assets/people-discussing.webp" alt="Data Analytics Dashboard">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="main-footer" data-aos="fade-up">
+      <div class="footer-container">
+        <div class="footer-col footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+          </a>
+          <p class="footer-description">
+            Connecting India's brightest talent with world-class opportunities.
+            Your journey to a dream career starts here.
+          </p>
+         
+          <div class="social-links">
+            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404.html"><i class="fab fa-twitter"></i></a>
+            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+            <a href="404.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobPage.html">Find Jobs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Latest Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>For Candidates</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Browse Categories</a></li>
+            <li><a href="404.html">Saved Jobs</a></li>
+            <li><a href="404.html">Job Alerts</a></li>
+            <li><a href="blog.html">Career Advice</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Business Hub, HITEC City, Hyderabad, India</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@joblink.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 JobLink Portal. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<script>
+AOS.init({
+  duration:1000,
+  once:true
+});
+</script>
+
+</body>
+</html>

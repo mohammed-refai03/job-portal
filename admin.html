@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | JobNest</title>
+    <link rel="stylesheet" href="dashboardstyle.css">
+     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Admin<span>Portal</span></h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active"><i class="fas fa-chart-line"></i> <span>Insights</span></a>
+                <a href="#"><i class="fas fa-users"></i> <span>Manage Users</span></a>
+                <a href="#"><i class="fas fa-plus-circle"></i> <span>Post a Job</span></a>
+                <a href="#"><i class="fas fa-check-double"></i> <span>Approvals</span></a>
+                <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                <div class="nav-spacer"></div>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> <span>Exit Panel</span></a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="admin-topbar">
+                <div class="page-title">
+                    <h1>Platform Overview</h1>
+                    <p>Thursday, 12 March 2026</p>
+                </div>
+                <div class="admin-profile">
+                    <div class="system-status">
+                        <span class="pulse-dot"></span> System Live
+                    </div>
+                    <img src="https://i.pravatar.cc/150?u=admin" alt="Admin">
+                </div>
+            </header>
+
+            <div class="scroll-area">
+                <div class="admin-stats">
+                    <div class="stat-card reveal">
+                        <div class="icon-box purple"><i class="fas fa-user-graduate"></i></div>
+                        <div>
+                            <h4>Total Candidates</h4>
+                            <h2>8,540</h2>
+                            <span class="trend up">+12% this month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card reveal" style="animation-delay: 0.1s;">
+                        <div class="icon-box blue"><i class="fas fa-building"></i></div>
+                        <div>
+                            <h4>Active Companies</h4>
+                            <h2>1,210</h2>
+                            <span class="trend up">+5% this month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card reveal" style="animation-delay: 0.2s;">
+                        <div class="icon-box green"><i class="fas fa-rupee-sign"></i></div>
+                        <div>
+                            <h4>Revenue</h4>
+                            <h2>₹4.2L</h2>
+                            <span class="trend down">-2% this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-container reveal" style="animation-delay: 0.3s;">
+                        <div class="chart-header">
+                            <h3>Hiring Trends (2026)</h3>
+                            <select>
+                                <option>Last 6 Months</option>
+                                <option>Yearly</option>
+                            </select>
+                        </div>
+                        <canvas id="hiringChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-container donut reveal" style="animation-delay: 0.4s;">
+                        <h3>Job Categories</h3>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        <div class="admin-grid-row reveal" style="animation-delay: 0.5s;">
+    <div class="approval-card">
+        <div class="card-header">
+            <h3>Pending Employer Verifications</h3>
+            <span class="count-badge">4 New</span>
+        </div>
+        <div class="approval-list">
+            <div class="approval-item">
+                <div class="comp-info">
+                    <img src="https://logo.clearbit.com/tesla.com" alt="">
+                    <div>
+                        <h4>Tesla Motors</h4>
+                        <p>Requested 2h ago</p>
+                    </div>
+                </div>
+                <div class="action-group">
+                    <button class="check-btn"><i class="fas fa-check"></i></button>
+                    <button class="cross-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="log-card">
+        <h3>Recent System Activity</h3>
+        <ul class="activity-logs">
+            <li>
+                <span class="log-time">10:45 AM</span>
+                <p><strong>Admin_01</strong> deleted job post #4521</p>
+            </li>
+            <li>
+                <span class="log-time">09:12 AM</span>
+                <p>New employer <strong>"ZOHO"</strong> registered from Salem, TN</p>
+            </li>
+            <li>
+                <span class="log-time">Yesterday</span>
+                <p>System backup completed successfully</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="action-hub reveal" style="animation-delay: 0.15s;">
+    <button class="action-btn"><i class="fas fa-user-plus"></i> Add Admin</button>
+    <button class="action-btn"><i class="fas fa-file-export"></i> Export Report</button>
+    <button class="action-btn secondary"><i class="fas fa-shield-alt"></i> Security Audit</button>
+    <button class="action-btn danger"><i class="fas fa-ban"></i> Blocked IPs</button>
+</div>
+        </main>
+    </div>
+
+    <script>
+        // --- HIRING TRENDS LINE CHART ---
+        const ctxLine = document.getElementById('hiringChart').getContext('2d');
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Jobs Posted',
+                    data: [450, 590, 800, 810, 950, 1200],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#2563eb'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { display: false } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- CATEGORY DONUT CHART ---
+        const ctxDonut = document.getElementById('categoryChart').getContext('2d');
+        new Chart(ctxDonut, {
+            type: 'doughnut',
+            data: {
+                labels: ['IT', 'Finance', 'Design', 'Sales'],
+                datasets: [{
+                    data: [45, 25, 20, 10],
+                    backgroundColor: ['#2563eb', '#8b5cf6', '#10b981', '#f59e0b'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '70%',
+                plugins: {
+                    legend: { position: 'bottom', labels: { usePointStyle: true, padding: 20 } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

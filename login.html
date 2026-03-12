@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackLy - Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-visual">
+            <div class="visual-overlay"></div>
+            <div class="visual-content" data-aos="fade-right">
+                <a href="index.html" class="logo">Stack<span>ly</span></a>
+               <h1>Join the future of hiring in Salem.</h1>
+                <p>Over 12,000+ professionals have found their dream roles this month. Your turn is next.</p>
+                <a href="index.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+
+        <div class="auth-form-box">
+            <div class="form-wrapper" id="loginWrapper">
+            <a href="index.html" class="back-btn">Back to Home</a>
+
+                <h2>Welcome Back</h2>
+                <p class="header-p">New here? <a href="javascript:void(0)" onclick="switchForm('signup')">Create account</a></p>
+                
+                <form id="loginForm" onsubmit="validateLogin(event)">
+                    <div class="input-group" id="loginEmailGroup">
+                        <label>Email Address</label>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" placeholder="Enter your email">
+                        </div>
+                        <p class="error-msg">Please enter a valid email address</p>
+                    </div>
+
+                    <div class="input-group" id="loginPassGroup">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label>Password</label>
+                            <a href="404.html" style="font-size: 0.8rem; color: var(--primary); text-decoration: none;">Forgot?</a>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPass" placeholder="••••••••">
+                        </div>
+                        <p class="error-msg">Password is required</p>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Sign In</button>
+                    
+                    <div class="divider"><span>Or continue with</span></div>
+                    <div class="social-grid">
+                        <button type="button" class="social-btn" onclick="location.href='404.html'"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="18"> Google</button>
+                        <button type="button" class="social-btn" onclick="location.href='404.html'"><i class="fab fa-apple"></i> Apple</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-wrapper hidden" id="signupWrapper">
+                <a href="index.html" class="back-btn">Back to Home</a>
+                <h2>Create Account</h2>
+                <p class="header-p">Already a member? <a href="javascript:void(0)" onclick="switchForm('login')">Sign in</a></p>
+                
+                <form id="signupForm" onsubmit="validateSignup(event)">
+                    <div class="input-group" id="signNameGroup">
+                        <label>Full Name</label>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="signName" placeholder="Enter full name">
+                        </div>
+                        <p class="error-msg">Name is required</p>
+                    </div>
+
+                    <div class="input-group" id="signEmailGroup">
+                        <label>Email Address</label>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signEmail" placeholder="Email address">
+                        </div>
+                        <p class="error-msg">Enter a valid email</p>
+                    </div>
+
+                    <div class="input-group" id="signPassGroup">
+                        <label>Password</label>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signPass" placeholder="Minimum 6 characters">
+                        </div>
+                        <p class="error-msg">Password must be at least 6 characters</p>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Join StackLy</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Switch between Login and Signup
+        function switchForm(type) {
+            if(type === 'signup') {
+                document.getElementById('loginWrapper').classList.add('hidden');
+                document.getElementById('signupWrapper').classList.remove('hidden');
+            } else {
+                document.getElementById('signupWrapper').classList.add('hidden');
+                document.getElementById('loginWrapper').classList.remove('hidden');
+            }
+        }
+
+        // Login Validation Logic
+        function validateLogin(e) {
+            e.preventDefault();
+            let isValid = true;
+            const email = document.getElementById('loginEmail');
+            const pass = document.getElementById('loginPass');
+
+            // Simple Email Regex
+            if (!email.value.includes('@') || email.value.length < 5) {
+                document.getElementById('loginEmailGroup').classList.add('invalid');
+                isValid = false;
+            } else {
+                document.getElementById('loginEmailGroup').classList.remove('invalid');
+            }
+
+            if (pass.value.length < 1) {
+                document.getElementById('loginPassGroup').classList.add('invalid');
+                isValid = false;
+            } else {
+                document.getElementById('loginPassGroup').classList.remove('invalid');
+            }
+
+            if (isValid) {
+                window.location.href = "index.html"; // Success Redirect
+            }
+        }
+
+        // Signup Validation Logic
+        function validateSignup(e) {
+            e.preventDefault();
+            let isValid = true;
+            const name = document.getElementById('signName');
+            const email = document.getElementById('signEmail');
+            const pass = document.getElementById('signPass');
+
+            if (name.value.trim() === "") {
+                document.getElementById('signNameGroup').classList.add('invalid');
+                isValid = false;
+            } else {
+                document.getElementById('signNameGroup').classList.remove('invalid');
+            }
+
+            if (!email.value.includes('@')) {
+                document.getElementById('signEmailGroup').classList.add('invalid');
+                isValid = false;
+            } else {
+                document.getElementById('signEmailGroup').classList.remove('invalid');
+            }
+
+            if (pass.value.length < 6) {
+                document.getElementById('signPassGroup').classList.add('invalid');
+                isValid = false;
+            } else {
+                document.getElementById('signPassGroup').classList.remove('invalid');
+            }
+
+            if (isValid) {
+                window.location.href = "index.html"; // Success Redirect
+            }
+        }
+    </script>
+</body>
+</html>

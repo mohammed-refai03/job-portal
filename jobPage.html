@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Jobs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="jobPage.css">
+</head>
+<body>
+
+     <div id="page-transition" class="transition-overlay">
+      <div class="transition-content">
+        <img
+          src="assets/logo.webp"
+          alt="StackLu Logo"
+          class="transition-logo"
+        />
+        <div class="transition-spinner"></div>
+        <h4>Loading...</h4>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link active"
+              >Home <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="jobPage.html" class="nav-link">Find Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="login.html" class="login-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Login</span>
+          </a>
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="jobs-container">
+        <aside class="sidebar-filters">
+            <div class="filter-card">
+                <div class="filter-header">
+                    <h3><i class="fas fa-sliders-h"></i> Filters</h3>
+                    <button id="clearFilters" class="clear-btn">Clear All Filters</button>
+                </div>
+
+                <div class="filter-group">
+                    <label>CATEGORY</label>
+                    <select id="catFilter">
+                        <option value="all">All Categories</option>
+                        <option value="IT & Software">IT & Software</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Design">Design</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>JOB TYPE</label>
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="Full-time">Full-time</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>EXPERIENCE</label>
+                    <select id="expFilter">
+                        <option value="all">All Levels</option>
+                        <option value="Entry">Entry Level</option>
+                        <option value="Mid">Mid Level</option>
+                        <option value="Senior">Senior Level</option>
+                    </select>
+                </div>
+            </div>
+
+           
+        </aside>
+
+        <section class="job-feed">
+            <div class="feed-header">
+                <span id="resultCount" class="results-text">0 jobs found</span>
+                <div class="filter-group">
+                    <select id="sortSelect">
+                        <option value="latest">Latest</option>
+                        <option value="salaryHigh">Salary (High to Low)</option>
+                        <option value="salaryLow">Salary (Low to High)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="jobList" class="job-grid">
+                </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer" data-aos="fade-up">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <a href="#" class="footer-logo">
+                <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img">
+            </a>
+            <p class="footer-description">
+                Connecting India's brightest talent with world-class opportunities. Your journey to a dream career starts here.
+            </p>
+            <div class="social-links">
+                <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fab fa-twitter"></i></a>
+                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobPage.html">Find Jobs</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Latest Blogs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul class="footer-links">
+                <li><a href="404.html">Browse Categories</a></li>
+                <li><a href="404.html">Saved Jobs</a></li>
+                <li><a href="404.html">Job Alerts</a></li>
+                <li><a href="blog.html">Career Advice</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+             <div class="footer-contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Business Hub, HITEC City, Hyderabad, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@joblink.com</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2026 JobLink Portal. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="404.html">Privacy Policy</a>
+                <a href="404.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+        const jobs = [
+    { id: 1, title: "Senior Frontend Developer", company: "TechCorp India", category: "IT & Software", type: "Full-time", location: "Bangalore", salary: 25, exp: "Senior", date: 1, rating: 4.8 },
+    { id: 2, title: "UI/UX Designer", company: "DesignStudio", category: "Design", type: "Full-time", location: "Pune", salary: 16, exp: "Mid", date: 1, rating: 4.5 },
+    { id: 3, title: "Data Scientist", company: "Analytics Pro", category: "Data Science", type: "Full-time", location: "Hyderabad", salary: 30, exp: "Mid", date: 2, rating: 4.7 },
+    { id: 4, title: "DevOps Engineer", company: "InfraTech", category: "IT & Software", type: "Full-time", location: "Bangalore", salary: 24, exp: "Mid", date: 2, rating: 4.3 },
+    { id: 5, title: "Mobile App Developer", company: "AppWorks", category: "IT & Software", type: "Remote", location: "Hyderabad", salary: 20, exp: "Entry", date: 3, rating: 4.6 },
+    { id: 6, title: "Product Manager", company: "StartupHub", category: "Management", type: "Full-time", location: "Mumbai", salary: 35, exp: "Senior", date: 4, rating: 4.9 },
+    { id: 7, title: "Backend Architect", company: "CloudScale", category: "IT & Software", type: "Full-time", location: "Bangalore", salary: 42, exp: "Senior", date: 5, rating: 4.8 },
+    { id: 8, title: "Graphic Designer", company: "CreativeEdge", category: "Design", type: "Contract", location: "Remote", salary: 12, exp: "Entry", date: 5, rating: 4.2 },
+    { id: 9, title: "ML Engineer", company: "DeepLogic AI", category: "Data Science", type: "Full-time", location: "Pune", salary: 28, exp: "Mid", date: 6, rating: 4.7 },
+    { id: 10, title: "Digital Marketing Lead", company: "GrowthX", category: "Marketing", type: "Full-time", location: "Mumbai", salary: 18, exp: "Senior", date: 7, rating: 4.4 },
+    { id: 11, title: "Full Stack Developer", company: "SwiftCode", category: "IT & Software", type: "Remote", location: "Bangalore", salary: 22, exp: "Mid", date: 8, rating: 4.5 },
+    { id: 12, title: "Financial Analyst", company: "FinSmart", category: "Finance", type: "Full-time", location: "Hyderabad", salary: 15, exp: "Entry", date: 9, rating: 4.1 },
+    { id: 13, title: "HR Business Partner", company: "PeopleFirst", category: "Management", type: "Full-time", location: "Pune", salary: 14, exp: "Mid", date: 10, rating: 4.3 },
+    { id: 14, title: "Cybersecurity Analyst", company: "ShieldNet", category: "IT & Software", type: "Full-time", location: "Bangalore", salary: 26, exp: "Mid", date: 11, rating: 4.6 },
+    { id: 15, title: "Data Analyst", company: "Insightly", category: "Data Science", type: "Contract", location: "Remote", salary: 10, exp: "Entry", date: 12, rating: 4.0 },
+    { id: 16, title: "Social Media Manager", company: "BuzzMedia", category: "Marketing", type: "Full-time", location: "Mumbai", salary: 9, exp: "Entry", date: 13, rating: 4.2 },
+    { id: 17, title: "Cloud Solutions Architect", company: "AzureWave", category: "IT & Software", type: "Full-time", location: "Hyderabad", salary: 38, exp: "Senior", date: 14, rating: 4.9 },
+    { id: 18, title: "Project Coordinator", company: "BuildIt", category: "Management", type: "Full-time", location: "Pune", salary: 11, exp: "Entry", date: 15, rating: 4.1 },
+    { id: 19, title: "Content Strategist", company: "WriteWay", category: "Marketing", type: "Remote", location: "Mumbai", salary: 13, exp: "Mid", date: 16, rating: 4.4 },
+    { id: 20, title: "QA Automation Engineer", company: "BugFree", category: "IT & Software", type: "Full-time", location: "Bangalore", salary: 19, exp: "Mid", date: 17, rating: 4.5 }
+];
+
+
+const jobList = document.getElementById('jobList');
+const resultCount = document.getElementById('resultCount');
+
+function renderJobs(filteredJobs) {
+    jobList.innerHTML = '';
+    resultCount.innerText = `${filteredJobs.length} jobs found`;
+
+    filteredJobs.forEach(job => {
+        jobList.innerHTML += `
+            <div class="job-card">
+                <span class="featured-badge">Featured</span>
+                <div class="card-top">
+                    <div class="comp-logo">${job.company.substring(0,2).toUpperCase()}</div>
+                    <div class="job-info">
+                        <h3>${job.title}</h3>
+                        <p><i class="far fa-building"></i> ${job.company}</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <span class="type-pill"><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
+                    <span class="type-pill"><i class="fas fa-wallet"></i> ₹${job.salary} LPA</span>
+                    <span class="type-pill"><i class="far fa-clock"></i> ${job.exp} Level</span>
+                </div>
+                <div class="card-actions">
+                    <div class="type-pill">${job.type} • ${job.date}d ago</div>
+                    <div class="btns">
+                        <button class="clear-btn" style="margin-right:10px"><i class="far fa-bookmark"></i></button>
+                        <a href="404.html" class="apply-btn" style="text-decoration:none; color:white;">Apply</a>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function handleFilters() {
+    const cat = document.getElementById('catFilter').value;
+    const type = document.getElementById('typeFilter').value;
+    const exp = document.getElementById('expFilter').value;
+    const sort = document.getElementById('sortSelect').value;
+
+    let filtered = jobs.filter(job => {
+        return (cat === 'all' || job.category === cat) &&
+               (type === 'all' || job.type === type) &&
+               (exp === 'all' || job.exp === exp);
+    });
+
+    // Sorting
+    if (sort === 'salaryHigh') filtered.sort((a,b) => b.salary - a.salary);
+    if (sort === 'salaryLow') filtered.sort((a,b) => a.salary - b.salary);
+    if (sort === 'latest') filtered.sort((a,b) => a.date - b.date);
+
+    renderJobs(filtered);
+}
+
+// Event Listeners
+document.querySelectorAll('select').forEach(el => el.addEventListener('change', handleFilters));
+document.getElementById('clearFilters').addEventListener('click', () => {
+    document.querySelectorAll('select').forEach(s => s.value = 'all');
+    renderJobs(jobs);
+});
+
+// Initial Render
+renderJobs(jobs);
+    </script>
+</body>
+</html>

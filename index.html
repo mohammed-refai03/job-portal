@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly - Job Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="page-transition" class="transition-overlay">
+      <div class="transition-content">
+        <img
+          src="assets/logo.webp"
+          alt="StackLu Logo"
+          class="transition-logo"
+        />
+        <div class="transition-spinner"></div>
+        <h4>Loading...</h4>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link active"
+              >Home <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="jobPage.html" class="nav-link">Find Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="login.html" class="login-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Login</span>
+          </a>
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero-section" data-aos="fade-up" data-aos-duration="1000">
+      <div class="hero-container">
+        <div
+          class="hero-content"
+          data-aos="slide-up"
+          data-aos-delay="200"
+          data-aos-duration="1200"
+        >
+          <h1>Find Your <span>Dream Job</span><br />Start Your Career Today</h1>
+          <p>
+            Explore 50,000+ job opportunities from top companies across India
+          </p>
+        </div>
+         <a href="jobPage.html" style="text-decoration: none;">
+            <button id="search-btn" class=" search-btn">
+            Search Jobs
+          </button>
+          </a>
+
+        <div class="counter-grid">
+          <div class="counter-card">
+            <div class="icon-box"><i class="fas fa-suitcase"></i></div>
+            <div class="counter-info">
+              <h3><span class="counter" data-target="5000">0</span>+</h3>
+              <p>Jobs Posted</p>
+            </div>
+          </div>
+          <div class="counter-card">
+            <div class="icon-box"><i class="fas fa-building"></i></div>
+            <div class="counter-info">
+              <h3><span class="counter" data-target="850">0</span>+</h3>
+              <p>Companies</p>
+            </div>
+          </div>
+          <div class="counter-card">
+            <div class="icon-box"><i class="fas fa-users"></i></div>
+            <div class="counter-info">
+              <h3><span class="counter" data-target="20000">0</span></h3>
+              <p>Candidates</p>
+            </div>
+          </div>
+          <div class="counter-card">
+            <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+            <div class="counter-info">
+              <h3><span class="counter" data-target="1500">0</span>+</h3>
+              <p>Success Stories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="job-categories" data-aos="fade-up">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-down">
+          <h2 class="section-title">Popular Job Categories</h2>
+          <p class="section-subtitle">
+            Explore open positions across the most trending industries
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="category-icon">
+              <i class="fas fa-laptop-code" style="color: rgb(226, 43, 211);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Technology</h3>
+              <p>1,250+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="category-icon">
+              <i class="fas fa-chart-pie" style="color: rgb(43, 226, 76);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Finance</h3>
+              <p>800+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="category-icon">
+              <i class="fas fa-bullhorn" style="color: blueviolet;"></i>
+            </div>
+            <div class="category-info">
+              <h3>Marketing</h3>
+              <p>540+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="category-icon">
+              <i class="fas fa-user-md" style="color: rgb(43, 226, 180);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Healthcare</h3>
+              <p>320+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="category-icon">
+              <i class="fas fa-handshake" style="color: rgb(226, 180, 43);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Sales</h3>
+              <p>900+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="category-icon">
+              <i class="fas fa-graduation-cap" style="color: rgb(234, 94, 146);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Education</h3>
+              <p>410+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="category-icon">
+              <i class="fas fa-paint-brush" style="color: rgb(198, 226, 43);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Design</h3>
+              <p>670+ Openings</p>
+            </div>
+          </a>
+
+          <a
+            href="jobPage.html"
+            class="category-card"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="category-icon">
+              <i class="fas fa-headset" style="color: rgb(235, 141, 18);"></i>
+            </div>
+            <div class="category-info">
+              <h3>Customer Service</h3>
+              <p>1,100+ Openings</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-split-hero">
+    <div class="section-container">
+        <div class="cs-wrapper">
+            
+            <div class="cs-visual" data-aos="fade-right">
+                <div class="image-box">
+                    <img src="assets/business-meeting.webp" alt="Recruitment">
+                    <div class="experience-badge">
+                        <span class="num">10+</span>
+                        <span class="txt">Years of <br>Excellence</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cs-content">
+                <div class="floating-card primary-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="badge">New Opportunity</span>
+                    <h1>Find the job that <br><span class="blue-text">fits your life.</span></h1>
+                    <p>Exclusive openings for Engineers and Tech Professionals.</p>
+                </div>
+
+                <div class="floating-card info-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h4>500+ Jobs</h4>
+                            <p>Active Vacancies</p>
+                        </div>
+                    </div>
+                    <div class="info-divider"></div>
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h4>120+ Companies</h4>
+                            <p>Hiring Now</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-actions" data-aos="fade-up" data-aos-delay="600">
+                   <a href="jobPage.html"> <button class="btn-primary-sm">Explore Careers</button></a>
+                    <a href="404.html" class="video-link"><i class="fas fa-play"></i> Watch Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="featured-jobs" data-aos="fade-up" data-aos-duration="1000">
+      <div class="section-container">
+        <div class="section-header-flex" data-aos="fade-right">
+          <div class="header-text">
+            <h2 class="section-title">Featured Jobs</h2>
+            <p class="section-subtitle">
+              Hand-picked opportunities from top employers
+            </p>
+          </div>
+          <a href="jobPage.html" class="view-all-link"
+            >View all <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+
+        <div class="jobs-grid">
+          <div class="featured-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-top">
+              <div class="comp-logo-box text-blue">TC</div>
+              <div class="job-meta">
+                <h3 class="j-title">Senior Frontend Developer</h3>
+                <p class="j-company">TechCorp India</p>
+              </div>
+              <span class="feat-badge">Featured</span>
+            </div>
+
+            <div class="card-middle">
+              <span><i class="fas fa-map-marker-alt"></i> Bengaluru</span>
+              <span><i class="fas fa-wallet"></i> ₹18-25 LPA</span>
+              <span><i class="fas fa-briefcase"></i> 4-6 years</span>
+            </div>
+
+            <div class="card-bottom">
+              <div class="pills-group">
+                <span class="pill ft-pill">Full-time</span>
+                <span class="pill muted-pill">1d ago</span>
+              </div>
+              <div class="actions-group">
+                <button class="save-btn">
+                  <i class="far fa-bookmark"></i>
+                </button>
+               <a href="404.html">
+                 <button class="btn-primary-sm">Apply</button>
+               </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-top">
+              <div class="comp-logo-box text-orange">AP</div>
+              <div class="job-meta">
+                <h3 class="j-title">Data Scientist</h3>
+                <p class="j-company">Analytics Pro</p>
+              </div>
+              <span class="feat-badge">Featured</span>
+            </div>
+
+            <div class="card-middle">
+              <span><i class="fas fa-map-marker-alt"></i> Hyderabad</span>
+              <span><i class="fas fa-wallet"></i> ₹20-30 LPA</span>
+              <span><i class="fas fa-briefcase"></i> 3-5 years</span>
+            </div>
+
+            <div class="card-bottom">
+              <div class="pills-group">
+                <span class="pill ft-pill">Full-time</span>
+                <span class="pill muted-pill">2d ago</span>
+              </div>
+              <div class="actions-group">
+                <button class="save-btn">
+                  <i class="far fa-bookmark"></i>
+                </button>
+                 <a href="404.html">
+                 <button class="btn-primary-sm">Apply</button>
+               </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-top">
+              <div class="comp-logo-box text-blue">DS</div>
+              <div class="job-meta">
+                <h3 class="j-title">UI/UX Designer</h3>
+                <p class="j-company">DesignStudio</p>
+              </div>
+              <span class="feat-badge">Featured</span>
+            </div>
+
+            <div class="card-middle">
+              <span><i class="fas fa-map-marker-alt"></i> Pune</span>
+              <span><i class="fas fa-wallet"></i> ₹10-16 LPA</span>
+              <span><i class="fas fa-briefcase"></i> 2-4 years</span>
+            </div>
+
+            <div class="card-bottom">
+              <div class="pills-group">
+                <span class="pill ft-pill">Full-time</span>
+                <span class="pill muted-pill">1d ago</span>
+              </div>
+              <div class="actions-group">
+                <button class="save-btn">
+                  <i class="far fa-bookmark"></i>
+                </button>
+            <a href="404.html">
+                 <button class="btn-primary-sm">Apply</button>
+               </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-top">
+              <div class="comp-logo-box text-orange">IT</div>
+              <div class="job-meta">
+                <h3 class="j-title">DevOps Engineer</h3>
+                <p class="j-company">InfraTech</p>
+              </div>
+              <span class="feat-badge">Featured</span>
+            </div>
+
+            <div class="card-middle">
+              <span><i class="fas fa-map-marker-alt"></i> Bangalore</span>
+              <span><i class="fas fa-wallet"></i> ₹16-24 LPA</span>
+              <span><i class="fas fa-briefcase"></i> 3-5 years</span>
+            </div>
+
+            <div class="card-bottom">
+              <div class="pills-group">
+                <span class="pill ft-pill">Full-time</span>
+                <span class="pill muted-pill">2d ago</span>
+              </div>
+              <div class="actions-group">
+                <button class="save-btn">
+                  <i class="far fa-bookmark"></i>
+                </button>
+                 <a href="404.html">
+                 <button class="btn-primary-sm">Apply</button>
+               </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-section">
+      <div class="section-container choose-flex">
+        <div class="choose-content" data-aos="fade-right">
+          <h2 class="section-title">
+            Why Choose <span class="highlight">JobLink?</span>
+          </h2>
+          <p class="section-subtitle">
+            We provide the tools and connections you need to build the career
+            you've always wanted.
+          </p>
+
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Quick Apply</h4>
+                <p>
+                  Apply to multiple jobs with one click using your saved
+                  profile.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Verified Employers</h4>
+                <p>
+                  Every company is vetted to ensure real, high-quality
+                  opportunities.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div class="feature-text">
+                <h4>AI Job Matching</h4>
+                <p>
+                  Get personalized recommendations based on your unique skills.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="choose-image" data-aos="zoom-in">
+          <div class="image-wrapper">
+            <img
+              src="assets/working-space.webp"
+              alt="Modern Office"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section" data-aos="fade-up">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Success <span class="highlight">Stories</span>
+          </h2>
+          <p class="section-subtitle">
+            Read how JobLink has helped thousands of professionals find their
+            calling.
+          </p>
+        </div>
+
+        <div class="testimonial-wrapper">
+          <button class="nav-btn prev-btn" id="prev-testi">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nav-btn next-btn" id="next-testi">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="testimonial-slider" id="testimonial-slider">
+            <div class="testimonial-card active">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "I found my dream role at TechCorp within just two weeks of
+                creating my profile. The AI matching is scarily accurate!"
+              </p>
+              <div class="user-info">
+                <img src="assets/uifaces-popular-avatar (2).webp" alt="User 1" />
+                <div>
+                  <h4>Arjun Sharma</h4>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "The verified employers feature gave me the confidence to apply.
+                No more ghosting or fake listings. Highly recommended!"
+              </p>
+              <div class="user-info">
+                <img src="assets/uifaces-popular-avatar (3).webp" alt="User 2" />
+                <div>
+                  <h4>Priya Patel</h4>
+                  <p>Data Scientist</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Managing my applications through the JobLink dashboard is so
+                seamless. It’s the best career tool I've used in India."
+              </p>
+              <div class="user-info">
+                <img src="assets/uifaces-popular-avatar (4).webp" alt="User 3" />
+                <div>
+                  <h4>Rohan Verma</h4>
+                  <p>Project Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-dots" id="testi-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer" data-aos="fade-up">
+      <div class="footer-container">
+        <div class="footer-col footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="assets/logo.webp" alt="StackLy Logo" class="logo-img" />
+          </a>
+          <p class="footer-description">
+            Connecting India's brightest talent with world-class opportunities.
+            Your journey to a dream career starts here.
+          </p>
+         
+          <div class="social-links">
+            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404.html"><i class="fab fa-twitter"></i></a>
+            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+            <a href="404.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobPage.html">Find Jobs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Latest Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>For Candidates</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Browse Categories</a></li>
+            <li><a href="404.html">Saved Jobs</a></li>
+            <li><a href="404.html">Job Alerts</a></li>
+            <li><a href="blog.html">Career Advice</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Business Hub, HITEC City, Hyderabad, India</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@joblink.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 JobLink Portal. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, // Animation only happens once when you scroll down
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- 1. Search Functionality ---
+        const searchBtn = document.getElementById("search-btn");
+        const jobInput = document.getElementById("job-title");
+        const locInput = document.getElementById("job-location");
+
+        if (searchBtn) {
+          searchBtn.addEventListener("click", () => {
+            const title = jobInput.value.trim();
+            const location = locInput.value.trim();
+
+            // Redirect to jobPage.html with URL parameters
+            if (title || location) {
+              window.location.href = `jobPage.html?keyword=${encodeURIComponent(title)}&location=${encodeURIComponent(location)}`;
+            } else {
+              // If empty, just go to job page
+              window.location.href = "jobPage.html";
+            }
+          });
+        }
+
+        // --- 2. Animated Counter Logic ---
+        const counters = document.querySelectorAll(".counter");
+        const speed = 200; // Lower is faster
+
+        const startCounters = () => {
+          counters.forEach((counter) => {
+            const target = +counter.getAttribute("data-target");
+            let count = 0;
+            const duration = 2000; // 2 seconds total duration
+            const frameRate = 60; // 60 frames per second
+            const totalFrames = (duration / 1000) * frameRate;
+            const increment = target / totalFrames;
+            
+            const updateCount = () => {
+              count += increment;
+              if (count < target) {
+                counter.innerText = Math.ceil(count).toLocaleString();
+                requestAnimationFrame(updateCount);
+              } else {
+                counter.innerText = target.toLocaleString();
+              }
+            };
+            updateCount();
+          });
+        };
+
+        // Intersection Observer to start counting when section is visible
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startCounters();
+              observer.unobserve(entry.target); // Run only once
+            }
+          });
+        }, observerOptions);
+
+        const counterSection = document.querySelector(".counter-grid");
+        if (counterSection) observer.observe(counterSection);
+
+        //swiper section script
+
+        const cards = document.querySelectorAll(".testimonial-card");
+        const dots = document.querySelectorAll(".dot");
+        const prevBtn = document.getElementById("prev-testi");
+        const nextBtn = document.getElementById("next-testi");
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        const showTestimonial = (index) => {
+          cards.forEach((card) => card.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
+
+          cards[index].classList.add("active");
+          dots[index].classList.add("active");
+          currentIndex = index;
+        };
+
+        const nextTestimonial = () => {
+          let index = currentIndex + 1;
+          if (index >= cards.length) index = 0;
+          showTestimonial(index);
+        };
+
+        const prevTestimonial = () => {
+          let index = currentIndex - 1;
+          if (index < 0) index = cards.length - 1;
+          showTestimonial(index);
+        };
+
+        // Manual Click Events
+        nextBtn.addEventListener("click", () => {
+          nextTestimonial();
+          resetAutoPlay();
+        });
+
+        prevBtn.addEventListener("click", () => {
+          prevTestimonial();
+          resetAutoPlay();
+        });
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            showTestimonial(i);
+            resetAutoPlay();
+          });
+        });
+
+        // Auto Play Logic
+        const startAutoPlay = () => {
+          autoPlayInterval = setInterval(nextTestimonial, 5000); // 5 seconds
+        };
+
+        const resetAutoPlay = () => {
+          clearInterval(autoPlayInterval);
+          startAutoPlay();
+        };
+
+        startAutoPlay();
+      });
+    </script>
+  </body>
+</html>
