@@ -126,7 +126,25 @@
         }
 
         .input-field input:focus { border-color: var(--primary); outline: none; background: white; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); }
-        
+        .remember-me {
+  margin: 10px 0 18px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.remember-me label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--primary); /* modern colored checkbox */
+}
         /* Validation Error Style */
         .error-msg { color: var(--error); font-size: 0.75rem; margin-top: 5px; display: none; }
         .invalid input { border-color: var(--error) !important; }
